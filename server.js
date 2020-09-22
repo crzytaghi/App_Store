@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const cors = require('cors');
+const path = require('path');
 
 // ===== CONFIGURATION ===== //
 const app = express();
@@ -27,6 +28,16 @@ app.use('/application', applicationController);
 app.get('/products/:id', (req,res,next) => {
   res.json({msg: 'This is CORS-enabled for all origins!'});
 })
+
+// Serve static assets if in production
+if(process.env.NODE_ENV === 'production') {
+  // Set static folder
+  app.use(express.static('app_store/build'));
+
+  app.get('*', (req,res) => {
+    res.sendFile(path.resolve(__dirname, 'app_store', 'build', 'index.html'));
+  })
+}
 
 // ===== ERROR / SUCCESS ===== //
 db.on('error', (err) => {
