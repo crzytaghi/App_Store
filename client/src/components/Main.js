@@ -13,7 +13,7 @@ class Main extends React.Component {
 
   // ========== MAKE A REQUEST TO THE DB ========== //
   componentDidMount = () => {
-    axios.get('http://localhost:3000/application').then(
+    axios.get('/application').then(
       (response) => {
         console.log(response.data);
         this.setState({
