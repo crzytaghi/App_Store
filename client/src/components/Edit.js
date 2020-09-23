@@ -27,7 +27,7 @@ class Edit extends React.Component {
 
   changeStatus = (event) => {
     // event.preventDefault();
-    axios.put('http://localhost:3000/application/' + event.target.getAttribute('id'),
+    axios.put('/application/' + event.target.getAttribute('id'),
     {
       status:this.state.updatedStatus
     }

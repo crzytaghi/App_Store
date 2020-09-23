@@ -26,7 +26,7 @@ class Main extends React.Component {
   // ========== CREATE A NEW JOB APPLICATION ========== //
   addApp = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:3000/application',
+    axios.post('/application',
       {
         status:this.state.statusNew,
         dateSubmitted:this.state.dateSubmittedNew,
@@ -88,7 +88,7 @@ class Main extends React.Component {
   }
 
   deleteApp = (event) => {
-    axios.delete('http://localhost:3000/application/' + event.target.value).then(
+    axios.delete('/application/' + event.target.value).then(
       (response) => {
         this.setState({
           app:response.data
