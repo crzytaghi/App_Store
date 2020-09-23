@@ -10,7 +10,7 @@ App_Store is an application that stores the users job applications. Built utiliz
 - JavaScript
 
 ## Link to Live Site
-[App Store][https://desolate-beach-16443.herokuapp.com/]
+[App Store](https://desolate-beach-16443.herokuapp.com/)
 
 ## Code Snippets
 ### Accessing the DB and displaying the data to the user
