@@ -2,7 +2,7 @@
 
 App_Store is an application that stores the users job applications. Built utilizing the MERN Stack. I implemented a clean UI that enables the user to access the features of the site with little to no instructions.
 
-## Languages Used
+## Tech Stack
 - MongoDB (NoSQL)
 - Express
 - React.js
